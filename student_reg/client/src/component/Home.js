@@ -31,7 +31,10 @@ export default function Home() {
           </ul>
         </div>
       </nav>
-      <h4 className="mt-5 text-center">Here you can Add or update student data by selecting the corresponding option from above</h4>
+      <h4 className="mt-5 text-center">
+        Here you can Add or update student data by selecting the corresponding
+        option from above
+      </h4>
     </div>
   );
 }

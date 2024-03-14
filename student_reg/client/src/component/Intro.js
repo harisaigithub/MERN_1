@@ -31,8 +31,11 @@ export default function Intro() {
         </li>
       </h5>
       <br></br>
-        <ul class="text-left">
-        <p style={{ textDecoration: 'underline' }}> Additional features going to incorporated in the future, such as:</p>  
+      <ul class="text-left">
+        <p style={{ textDecoration: "underline" }}>
+          {" "}
+          Additional features going to incorporated in the future, such as:
+        </p>
         <li class="mb-2">
           User authentication and authorization for secure access control.
         </li>
@@ -43,7 +46,7 @@ export default function Intro() {
           Integration with other features for a more comprehensive Student
           management solution.
         </li>
-        </ul>
+      </ul>
     </div>
   );
 }

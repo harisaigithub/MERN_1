@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 export default function About() {
   return (
-    <div className='container mt-5'>
-      <h1 className='mt-5 text-center'>TECH STACK DETAILS</h1>
-      <div className='row mt-5'>
-        <div className='col-md-6'>
+    <div className="container mt-5">
+      <h1 className="mt-5 text-center">TECH STACK DETAILS</h1>
+      <div className="row mt-5">
+        <div className="col-md-6">
           <h5>Front-End Technology</h5>
           <div class="card shadow">
             <ul class="list-group list-group-flush">
@@ -15,8 +15,8 @@ export default function About() {
             </ul>
           </div>
         </div>
-        <div className='col-md-6'>
-          <h5 >Back-End Technology</h5>
+        <div className="col-md-6">
+          <h5>Back-End Technology</h5>
           <div class="card shadow">
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Node js</li>
@@ -27,5 +27,5 @@ export default function About() {
         </div>
       </div>
     </div>
-  )
+  );
 }
