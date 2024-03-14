@@ -11,12 +11,14 @@ import Addstud from './component/Addstud';
 import Edit from './component/Edit';
 import Home from './component/Home';
 import Allstud from './component/Allstud';
+import Intro from './component/Intro';
 function App() {
   return (
   <BrowserRouter>
       <Navbar />
       <Routes >
-      <Route  path='/' element={<Home />} />
+      <Route  path='/' element={<Intro />} />
+      <Route  path='/home' element={<Home />} />
           <Route  path='/about' element={<About />} />
           <Route  path='/allstud' element={<Allstud />} />
           <Route  path='/addstud' element={<Addstud />} />

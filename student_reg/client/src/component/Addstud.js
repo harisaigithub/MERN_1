@@ -86,7 +86,7 @@ export default function Addstud() {
                 <div className='d-flex'>
                          <button className='btn btn-primary' onClick={addinpdata}>Add Student</button>
                          <ToastContainer />
-                         <NavLink className='btn btn-primary ms-auto' to="/allstud">Back to Home</NavLink>
+                         <NavLink className='btn btn-primary ms-auto' to="/home">Back to Home</NavLink>
                 </div>
               
 

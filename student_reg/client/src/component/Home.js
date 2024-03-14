@@ -1,24 +1,37 @@
-import React from 'react'
-
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 export default function Home() {
   return (
-    <div className='container mt-5'>
-      <h1 className='mt-5 text-center'>Welcome to my MERN Stack Student Registration System!
-</h1>
-      <br></br>
-      <h6 className=' text-center '>
-      This application allows you to manage your Student Data/Records efficiently using a MERN stack architecture.
-      </h6>
-        <br></br>
-      <h4 className='text-left' >Here's a breakdown of the technologies used:</h4>
-      <br></br>
-      <h5 >
-      <ul className='text-left' >This system provides functionalities for:</ul>
-      <li>Viewing all Students in your records.</li>
-      <li>Adding new Students with details like Name,Subject,Address,Contact etc.</li>
-      <li>Updating existing Student records to reflect any changes.</li>
-      <li>Deleting students from your records when necessary.</li>
-      </h5>
+    <div className="container mt-5 ">
+      <h1 className="mt-5 text-center">Add & Update</h1>
+      <nav className="navbar navbar-expand-sm navbar-light bg-success">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav">
+            <li className="nav-item ms5 text-center mb-2 mb-lg-0">
+              <NavLink className="nav-link text-white fs-4" to="/addstud">
+                Add Student
+              </NavLink>
+            </li>
+            <li className="nav-item ms-5 navbar-nav mb-2 mb-lg-0">
+              <NavLink className=" nav-link text-white fs-4" to="/allstud">
+                All Students
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h3 className="mt-5 text-center">Here you can Add or update student data by selecting the corresponding option from above</h3>
     </div>
-  )
+  );
 }
