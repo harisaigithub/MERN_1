@@ -21,7 +21,7 @@ export default function About() {
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Node js</li>
               <li class="list-group-item">Express JS </li>
-              <li class="list-group-item">Mongodb Compass</li>
+              <li class="list-group-item">Mongodb Atlas</li>
             </ul>
           </div>
         </div>
