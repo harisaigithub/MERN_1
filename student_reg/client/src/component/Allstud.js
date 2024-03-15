@@ -79,7 +79,7 @@ export default function Allstud() {
         <tbody>
           {getstud
             .filter((val) => {
-              if (searchInput == "") {
+              if (searchInput === "") {
                 return val;
               } else if (
                 val.name.toLowerCase().includes(searchInput.toLowerCase())
