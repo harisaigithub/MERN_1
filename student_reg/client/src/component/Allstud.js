@@ -70,10 +70,10 @@ export default function Allstud() {
           <tr>
             <th scope="col">No</th>
             <th scope="col">Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Subject</th>
+            <th scope="col">RollNo</th>
+            <th scope="col">Branch </th>
             <th scope="col">Contact </th>
-            <th scope="col">Action </th>
+            <th scope="col">Address</th>
           </tr>
         </thead>
         <tbody>
@@ -93,9 +93,10 @@ export default function Allstud() {
                   <tr key={id}>
                     <th scope="row">{id + 1}</th>
                     <td>{result.name}</td>
-                    <td>{result.address}</td>
-                    <td>{result.subject}</td>
+                    <td>{result.rollno}</td>
+                    <td>{result.branch}</td>
                     <td>{result.contact}</td>
+                    <td>{result.address}</td>
                     <td>
                       <Link
                         className="btn btn-success ms-2"

@@ -8,9 +8,10 @@ export default function Addstud() {
   const navigate = useNavigate();
   const [inputdata, setInputdata] = useState({
     name: "",
-    address: "",
-    subject: "",
+    branch: "",
+    rollno: "",
     contact: "",
+    address: "",
   });
 
   //onchange function
@@ -22,7 +23,7 @@ export default function Addstud() {
   const addinpdata = async (e) => {
     e.preventDefault();
 
-    const { name, address, subject, contact } = inputdata;
+    const { name, branch, rollno, contact, address } = inputdata;
 
     const res = await fetch("http://localhost:5000/addstud", {
       method: "POST",
@@ -31,9 +32,10 @@ export default function Addstud() {
       },
       body: JSON.stringify({
         name,
-        address,
-        subject,
+        branch,
+        rollno,
         contact,
+        address,
       }),
     });
 
@@ -80,30 +82,30 @@ export default function Addstud() {
         </div>
         <div className="mb-3">
           <label htmlFor="exampleFormControlInput1" className="form-label">
-            Student Address
+            Student Branch
           </label>
           <input
             type="text"
             className="form-control"
             id="exampleFormControlInput1"
-            placeholder="Enter Student Address"
+            placeholder="Enter Student Branch"
             onChange={setstud}
-            name="address"
-            value={inputdata.address}
+            name="branch"
+            value={inputdata.branch}
           />
         </div>
         <div className="mb-3">
           <label htmlFor="exampleFormControlInput1" className="form-label">
-            Student Subject
+            Student RollNo
           </label>
           <input
             type="text"
             className="form-control"
             id="exampleFormControlInput1"
-            placeholder="Enter Subject Name"
+            placeholder="Enter Subject RollNo"
             onChange={setstud}
             name="subject"
-            value={inputdata.subject}
+            value={inputdata.RollNo}
           />
         </div>
         <div className="mb-3">
@@ -118,6 +120,20 @@ export default function Addstud() {
             onChange={setstud}
             name="contact"
             value={inputdata.contact}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="exampleFormControlInput1" className="form-label">
+            Student Address
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Enter Student Address"
+            onChange={setstud}
+            name="address"
+            value={inputdata.address}
           />
         </div>
         <div className="d-flex">
