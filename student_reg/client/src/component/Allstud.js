@@ -6,7 +6,7 @@ export default function Allstud() {
   console.log(getstud);
   //get student Data
   const getstuddata = async () => {
-    const res = await fetch("http://localhost:5000/getstud", {
+    const res = await fetch("mongodb+srv://admin:harisaiparasa@999@cluster0.jssvzff.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +29,7 @@ export default function Allstud() {
 
   //Delete student data
   const deletestud = async (id) => {
-    const res2 = await fetch(`http://localhost:5000/deletestud/${id}`, {
+    const res2 = await fetch(`mongodb+srv://admin:harisaiparasa@999@cluster0.jssvzff.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

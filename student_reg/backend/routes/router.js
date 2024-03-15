@@ -5,9 +5,9 @@ const students=require("../models/studSchema");
 
 //send data post method
 router.post("/addstud",async(req,res)=>{
-    const {name,address,subject,contact}=req.body;
+    const {name, branch, rollno, contact, address}=req.body;
 
-    if(!name || !address || !subject || !contact){
+    if(!name || !branch || !rollno || !contact || !address ){
         res.status(422).json("Please fillup the Data")
     }
 
@@ -18,7 +18,7 @@ router.post("/addstud",async(req,res)=>{
             res.status(422).json("This student already Present")
 
         }else{
-            const addstudent =new students ({name,address,subject,contact});
+            const addstudent =new students ({name, branch, rollno, contact, address});
             await addstudent.save();
             res.status(201).json(addstudent)
         }

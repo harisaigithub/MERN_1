@@ -4,16 +4,20 @@ const studSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    address:{
+    branch:{
         type:String,
         required:true
     },
-    subject:{
+    rollno:{
         type:String,
         required:true
     },
     contact:{
         type:Number,
+        required:true
+    },
+    address :{
+        type:string,
         required:true
     }
 });

@@ -25,7 +25,7 @@ export default function Addstud() {
 
     const { name, branch, rollno, contact, address } = inputdata;
 
-    const res = await fetch("http://localhost:5000/addstud", {
+    const res = await fetch("mongodb+srv://admin:harisaiparasa@999@cluster0.jssvzff.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export default function Addstud() {
         rollno,
         contact,
         address,
-      }),
+      })
     });
 
     const data = await res.json();
