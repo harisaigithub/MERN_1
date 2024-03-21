@@ -29,7 +29,7 @@ export default function Allstud() {
 
   //Delete student data
   const deletestud = async (id) => {
-    const res2 = await fetch(`mongodb+srv://admin:pass@cluster0.jssvzff.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/${id}`, {
+    const res2 = await fetch(``, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -78,15 +78,15 @@ export default function Allstud() {
         </thead>
         <tbody>
           {getstud
-            .filter((val) => {
-              if (searchInput === "") {
-                return val;
-              } else if (
-                val.name.toLowerCase().includes(searchInput.toLowerCase())
-              ) {
-                return val;
-              }
-            })
+              .filter((val) => {
+                if (searchInput === "") {
+                  return true; // Include all elements if searchInput is empty
+                } else if (val.name.toLowerCase().includes(searchInput.toLowerCase())) {
+                  return true; // Include element if name matches search
+                } else {
+                  return false; // Exclude element otherwise
+                }
+              })
             .map((result, id) => {
               return (
                 <>
@@ -124,7 +124,7 @@ export default function Allstud() {
               );
             })}
         </tbody>
-      </table>
+      </table> 
     </div>
   );
 }
